@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-script: 'Caveat', cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #34282c;
+    background-color: #fffdfb;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+/* Reference 1: Soft Pink & White Gingham with Scattered Hand-Painted Hearts */
+.bg-gingham-hearts {
+  background-color: #fffdfb;
+  background-image: url('/src/assets/images/bg_gingham_hearts_1791062326881.jpg');
+  background-repeat: repeat;
+  background-size: 420px auto;
+  background-attachment: fixed;
+}
+
+/* Reference 2: Crumpled White Paper & Cotton Linen with Painted Pink Hearts */
+.bg-crumpled-hearts {
+  background-color: #fffdfb;
+  background-image: url('/src/assets/images/bg_crumpled_paper_hearts_1791062338442.jpg');
+  background-repeat: repeat;
+  background-size: 520px auto;
+  background-attachment: fixed;
+}
+
+/* Section-level paper texture with soft overlay */
+.bg-paper-texture {
+  background-color: #fffdfb;
+  background-image: url('/src/assets/images/bg_gingham_hearts_1791062326881.jpg');
+  background-repeat: repeat;
+  background-size: 380px auto;
+}
+
+.bg-paper-crumpled-section {
+  background-color: #fffdfb;
+  background-image: url('/src/assets/images/bg_crumpled_paper_hearts_1791062338442.jpg');
+  background-repeat: repeat;
+  background-size: 460px auto;
+}
+
+/* Soft paper backdrop scrim for card legibility */
+.paper-card-scrim {
+  background-color: rgba(255, 253, 251, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+/* Paper craft shadow layers */
+.shadow-paper {
+  box-shadow: 
+    0 1px 3px rgba(52, 40, 44, 0.04),
+    0 8px 20px -3px rgba(196, 123, 137, 0.12),
+    0 20px 40px -8px rgba(52, 40, 44, 0.08);
+}
+
+.shadow-paper-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadow-paper-hover:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 
+    0 4px 8px rgba(52, 40, 44, 0.04),
+    0 16px 32px -4px rgba(196, 123, 137, 0.18),
+    0 28px 50px -10px rgba(52, 40, 44, 0.12);
+}
+
+.shadow-polaroid {
+  box-shadow: 
+    0 4px 12px rgba(52, 40, 44, 0.06),
+    0 14px 36px -4px rgba(184, 107, 123, 0.16);
+}
+
+/* Washi tape visual accent */
+.washi-tape-pink {
+  position: relative;
+}
+.washi-tape-pink::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 90px;
+  height: 24px;
+  background: rgba(249, 216, 222, 0.85);
+  backdrop-filter: blur(1px);
+  border-left: 2px dashed rgba(196, 123, 137, 0.3);
+  border-right: 2px dashed rgba(196, 123, 137, 0.3);
+  box-shadow: 0 1px 3px rgba(52, 40, 44, 0.08);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Custom aesthetic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F4B8C5;
+  border-radius: 9999px;
+  border: 2px solid #FFF9FA;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C47B89;
+}
