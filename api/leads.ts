@@ -1,5 +1,3 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-
 type LeadPayload = {
   name?: unknown;
   email?: unknown;
@@ -12,7 +10,7 @@ function asText(value: unknown, maxLength: number): string {
   return typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
 }
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: any, res: any) {
   res.setHeader('Cache-Control', 'no-store');
 
   if (req.method !== 'POST') {
