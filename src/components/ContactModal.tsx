@@ -29,6 +29,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   useEffect(() => {
     if (initialBrief) {
@@ -43,14 +44,39 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate realistic swift submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          instagram: formData.brandName.trim() || null,
+          website_type: formData.projectScope,
+          message: [
+            formData.message.trim(),
+            `Budget: ${formData.budget}`,
+            `Target launch: ${formData.timeline}`,
+          ].join('\\n\\n'),
+        }),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => ({}));
+        throw new Error(result.error || 'We could not send your note. Please try again.');
+      }
+
       setSubmitted(true);
-    }, 600);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -234,6 +260,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   className="w-full px-4 py-3 rounded-xl border border-[#F9D8DE] bg-[#FFF9FA] focus:bg-[#FFFDFB] focus:border-[#C47B89] outline-none text-sm transition-colors resize-none"
                 />
               </div>
+
+              {submitError && (
+                <p role="alert" className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-xl p-3">
+                  {submitError}
+                </p>
+              )}
 
               <div className="pt-2">
                 <button
