@@ -1,7 +1,13 @@
 import { Project, Service, Testimonial, ProcessStep } from '../types';
+import kavyaReserveImage from '../assets/images/project_kavya_reserve_1791061637823.jpg';
+import designerPolaroidImage from '../assets/images/portrait_designer_polaroid_1791060316040.jpg';
+import elaneInteriorImage from '../assets/images/project_elane_interior_1791061652458.jpg';
+import hairAttractionImage from '../assets/images/project_hair_attraction_1791061670704.jpg';
+import automaniacImage from '../assets/images/project_automaniac_studio_1791061682769.jpg';
+import brewCrewImage from '../assets/images/project_brew_crew_1791061693530.jpg';
 
-export const HERO_IMAGE = '/src/assets/images/project_kavya_reserve_1791061637823.jpg';
-export const DESIGNER_POLAROID = '/src/assets/images/portrait_designer_polaroid_1791060316040.jpg';
+export const HERO_IMAGE = kavyaReserveImage;
+export const DESIGNER_POLAROID = designerPolaroidImage;
 
 export const PROJECTS: Project[] = [
   {
@@ -13,7 +19,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tagline: 'An ethereal coastal sanctuary where dramatic cliffs meet untamed oceanic horizon.',
     description: 'Tranquil editorial digital residency featuring panoramic vistas, bespoke villa reservation architecture, and sensory seasonal itineraries.',
-    image: '/src/assets/images/project_kavya_reserve_1791061637823.jpg',
+    image: kavyaReserveImage,
     aspectRatio: '4/3',
     deliverables: ['Editorial Sanctuary Art Direction', 'Direct Booking Engine UI', 'Interactive Retreat Itinerary Guide', 'Speed & SEO Optimization'],
     metrics: {
@@ -40,7 +46,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tagline: 'Sculptural minimalism and warm organic textures for contemporary architectural living.',
     description: 'A gallery-grade portfolio showcasing bespoke residential curation, tactile material palettes, and private project consultations.',
-    image: '/src/assets/images/project_elane_interior_1791061652458.jpg',
+    image: elaneInteriorImage,
     aspectRatio: '4/3',
     deliverables: ['Custom Architectural Portfolio', 'Curated Project Moodboards', 'Client Consultation Funnel', 'Tactile Motion Choreography'],
     metrics: {
@@ -67,7 +73,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tagline: 'Haute coiffure and personalized beauty ritual experiences crafted with elegance.',
     description: 'Chic editorial digital studio featuring master stylist portfolios, curated haircare boutiques, and frictionless VIP appointment booking.',
-    image: '/src/assets/images/project_hair_attraction_1791061670704.jpg',
+    image: hairAttractionImage,
     aspectRatio: '4/3',
     deliverables: ['Full Salon Identity & UI', 'Stylist Portfolio Showcase', 'Instant Appointment Booking Flow', 'E-Commerce Product Curation'],
     metrics: {
@@ -94,7 +100,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tagline: 'Flawless mirror finishes, paint protection, and obsessive craft for elite automobiles.',
     description: 'High-contrast precision digital showcase highlighting ceramic coating tiers, paint correction showreels, and bespoke service packages.',
-    image: '/src/assets/images/project_automaniac_studio_1791061682769.jpg',
+    image: automaniacImage,
     aspectRatio: '4/3',
     deliverables: ['Precision Automotive Web UI', 'Service Tier Configurator', 'Transformation Before/After Slider', 'Quote Request Engine'],
     metrics: {
@@ -121,7 +127,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tagline: 'Single-origin micro-lot roasts and community cafe culture curated for true connoisseurs.',
     description: 'Warm tactile coffee collective website featuring roast profile accordions, curated bean subscriptions, and neighborhood cafe guides.',
-    image: '/src/assets/images/project_brew_crew_1791061693530.jpg',
+    image: brewCrewImage,
     aspectRatio: '4/3',
     deliverables: ['Specialty E-Commerce Store', 'Roast Taste Profile Matrix', 'Coffee Subscription Portal', 'Cafe Location Finder'],
     metrics: {
