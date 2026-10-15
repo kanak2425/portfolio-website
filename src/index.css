@@ -26,7 +26,7 @@
 /* Reference 1: Soft Pink & White Gingham with Scattered Hand-Painted Hearts */
 .bg-gingham-hearts {
   background-color: #fffdfb;
-  background-image: url('/src/assets/images/bg_gingham_hearts_1791062326881.jpg');
+  background-image: url('./assets/images/bg_gingham_hearts_1791062326881.jpg');
   background-repeat: repeat;
   background-size: 420px auto;
   background-attachment: fixed;
@@ -35,7 +35,7 @@
 /* Reference 2: Crumpled White Paper & Cotton Linen with Painted Pink Hearts */
 .bg-crumpled-hearts {
   background-color: #fffdfb;
-  background-image: url('/src/assets/images/bg_crumpled_paper_hearts_1791062338442.jpg');
+  background-image: url('./assets/images/bg_crumpled_paper_hearts_1791062338442.jpg');
   background-repeat: repeat;
   background-size: 520px auto;
   background-attachment: fixed;
@@ -44,14 +44,14 @@
 /* Section-level paper texture with soft overlay */
 .bg-paper-texture {
   background-color: #fffdfb;
-  background-image: url('/src/assets/images/bg_gingham_hearts_1791062326881.jpg');
+  background-image: url('./assets/images/bg_gingham_hearts_1791062326881.jpg');
   background-repeat: repeat;
   background-size: 380px auto;
 }
 
 .bg-paper-crumpled-section {
   background-color: #fffdfb;
-  background-image: url('/src/assets/images/bg_crumpled_paper_hearts_1791062338442.jpg');
+  background-image: url('./assets/images/bg_crumpled_paper_hearts_1791062338442.jpg');
   background-repeat: repeat;
   background-size: 460px auto;
 }
