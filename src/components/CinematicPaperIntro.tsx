@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Heart, Sparkles, FastForward, RotateCcw } from 'lucide-react';
+import crumpledBallImage from '../assets/images/paper_crumpled_ball_1791062148668.jpg';
+import unfoldingCreasesImage from '../assets/images/paper_unfolding_creases_1791062161844.jpg';
 
 interface CinematicPaperIntroProps {
   onComplete: () => void;
@@ -232,7 +234,7 @@ export const CinematicPaperIntro: React.FC<CinematicPaperIntroProps> = ({ onComp
             
             {/* The hyper-realistic photographed crumpled paper ball texture */}
             <img
-              src="/src/assets/images/paper_crumpled_ball_1791062148668.jpg"
+              src=crumpledBallImage
               alt="Crumpled paper ball"
               className="w-full h-full object-cover rounded-full mix-blend-multiply filter contrast-110 drop-shadow-md"
             />
@@ -298,7 +300,7 @@ export const CinematicPaperIntro: React.FC<CinematicPaperIntroProps> = ({ onComp
             {/* Real Unfolded Creased Paper Texture Backdrop */}
             <div className="absolute inset-0 opacity-25 mix-blend-multiply pointer-events-none">
               <img
-                src="/src/assets/images/paper_unfolding_creases_1791062161844.jpg"
+                src=unfoldingCreasesImage
                 alt="Unfolded paper texture"
                 className="w-full h-full object-cover"
               />
