@@ -234,7 +234,7 @@ export const CinematicPaperIntro: React.FC<CinematicPaperIntroProps> = ({ onComp
             
             {/* The hyper-realistic photographed crumpled paper ball texture */}
             <img
-              src=crumpledBallImage
+              src={crumpledBallImage}
               alt="Crumpled paper ball"
               className="w-full h-full object-cover rounded-full mix-blend-multiply filter contrast-110 drop-shadow-md"
             />
@@ -300,7 +300,7 @@ export const CinematicPaperIntro: React.FC<CinematicPaperIntroProps> = ({ onComp
             {/* Real Unfolded Creased Paper Texture Backdrop */}
             <div className="absolute inset-0 opacity-25 mix-blend-multiply pointer-events-none">
               <img
-                src=unfoldingCreasesImage
+                src={unfoldingCreasesImage}
                 alt="Unfolded paper texture"
                 className="w-full h-full object-cover"
               />
