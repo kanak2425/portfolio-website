@@ -1,10 +1,10 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Check } from 'lucide-react';
+import { Sparkles, Check } from 'lucide-react';
 import { SERVICES } from '../data/portfolioData';
 import { Service } from '../types';
 
 interface ServicesProps {
-  onOpenQuiz: () => void;
+  onOpenQuiz?: () => void;
   onSelectService?: (service: Service) => void;
 }
 
@@ -29,15 +29,8 @@ export const Services: React.FC<ServicesProps> = ({ onOpenQuiz }) => {
             </h2>
           </div>
 
-          <div className="flex flex-col items-start md:items-end">
-            <button
-              onClick={onOpenQuiz}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#FFFDFB] hover:bg-[#FCECEF] text-[#34282C] text-xs font-semibold uppercase tracking-wider rounded-full border border-[#F4B8C5] shadow-xs hover:shadow-paper transition-all cursor-pointer group"
-            >
-              <span>WHAT CAN WE BUILD?</span>
-              <ArrowRight className="w-4 h-4 text-[#C47B89] group-hover:translate-x-1 transition-transform" />
-            </button>
-            <span className="text-xs font-script text-[#B86B7B] mt-1.5 rotate-[-1deg]">
+          <div className="flex flex-col items-start md:items-end pb-1">
+            <span className="text-sm md:text-base font-script text-[#B86B7B] rotate-[-1deg]">
               tell us about your dream vision ♡
             </span>
           </div>
