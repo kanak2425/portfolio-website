@@ -1,12 +1,12 @@
 import React from 'react';
-import { Heart, Sparkles, Check, ArrowRight } from 'lucide-react';
+import { Heart, Sparkles } from 'lucide-react';
 import { WHY_US_PILLARS } from '../data/portfolioData';
 
 interface WhyWorkWithMeProps {
-  onOpenContact: () => void;
+  onOpenContact?: () => void;
 }
 
-export const WhyWorkWithMe: React.FC<WhyWorkWithMeProps> = ({ onOpenContact }) => {
+export const WhyWorkWithMe: React.FC<WhyWorkWithMeProps> = () => {
   return (
     <section className="py-24 md:py-36 relative bg-[#FAF6F3]/85 backdrop-blur-[2px] border-y border-[#F9D8DE]/80 overflow-hidden">
       {/* Delicate background gingham strip */}
@@ -82,17 +82,6 @@ export const WhyWorkWithMe: React.FC<WhyWorkWithMeProps> = ({ onOpenContact }) =
               </div>
             );
           })}
-        </div>
-
-        {/* Bottom CTA bar */}
-        <div className="mt-16 text-center">
-          <button
-            onClick={onOpenContact}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#34282C] hover:bg-[#44373B] text-[#FFFDF9] text-xs font-semibold uppercase tracking-widest rounded-full shadow-paper transition-all hover:-translate-y-0.5 cursor-pointer"
-          >
-            <span>Let’s Build Something Distinctive</span>
-            <ArrowRight className="w-4 h-4 text-[#F9D8DE]" />
-          </button>
         </div>
       </div>
     </section>
