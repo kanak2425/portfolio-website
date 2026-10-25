@@ -90,13 +90,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           )}
 
-          <button
-            onClick={onOpenContact}
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#34282C] bg-[#FCECEF] hover:bg-[#F9D8DE] border border-[#F4B8C5] rounded-full shadow-sm hover:shadow transition-all duration-200 cursor-pointer active:scale-95"
-          >
-            <span>Let’s Work Together</span>
-            <ArrowUpRight className="w-3.5 h-3.5 text-[#C47B89]" />
-          </button>
 
           {/* Mobile menu button */}
           <button

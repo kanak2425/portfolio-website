@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, ArrowDown, Heart, Sparkles } from 'lucide-react';
+import { ArrowDown, Heart, Sparkles } from 'lucide-react';
 import { HERO_IMAGE } from '../data/portfolioData';
 
 interface HeroProps {
-  onOpenContact: () => void;
+  onOpenContact?: () => void;
   onScrollToWork: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenContact, onScrollToWork }) => {
+export const Hero: React.FC<HeroProps> = ({ onScrollToWork }) => {
   // Gentle parallax calculation based on mouse position
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -86,22 +86,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onScrollToWork }) => 
               luxury boutiques, and forward-thinking creators who refuse to look cookie-cutter.
             </p>
 
-            {/* Two Strong Action CTAs */}
+            {/* Action CTA */}
             <div className="flex flex-wrap items-center gap-4">
               <button
-                onClick={onOpenContact}
+                onClick={onScrollToWork}
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-[#34282C] hover:bg-[#44373B] text-[#FFFDF9] text-xs font-semibold uppercase tracking-widest rounded-full shadow-paper transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer active:scale-95"
               >
-                <span>LET’S WORK TOGETHER</span>
-                <ArrowUpRight className="w-4 h-4 text-[#F9D8DE] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </button>
-
-              <button
-                onClick={onScrollToWork}
-                className="group inline-flex items-center gap-3 px-7 py-4 bg-[#FFFDFB] hover:bg-[#FCECEF]/60 text-[#34282C] text-xs font-semibold uppercase tracking-widest rounded-full border border-[#F4B8C5] shadow-xs hover:border-[#C47B89] transition-all duration-300 cursor-pointer"
-              >
                 <span>VIEW MY WORK</span>
-                <ArrowDown className="w-4 h-4 text-[#C47B89] group-hover:translate-y-1 transition-transform" />
+                <ArrowDown className="w-4 h-4 text-[#F9D8DE] group-hover:translate-y-1 transition-transform" />
               </button>
             </div>
 

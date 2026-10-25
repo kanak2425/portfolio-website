@@ -1,11 +1,17 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs';
+import leadsHandler from './api/leads';
 
 const app = express();
 const PORT = parseInt(process.env.PORT || '3000', 10);
 
 app.use(express.json());
+
+// API Routes
+app.all('/api/leads', (req, res) => {
+  return leadsHandler(req, res);
+});
 
 // Serve static assets from the built Vite client
 const distPath = path.resolve('dist');
