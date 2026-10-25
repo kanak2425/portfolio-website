@@ -1,14 +1,14 @@
 import React from 'react';
-import { ArrowUpRight, ArrowRight, Sparkles, Clock, Check, Heart } from 'lucide-react';
+import { ArrowRight, Sparkles, Check } from 'lucide-react';
 import { SERVICES } from '../data/portfolioData';
 import { Service } from '../types';
 
 interface ServicesProps {
   onOpenQuiz: () => void;
-  onSelectService: (service: Service) => void;
+  onSelectService?: (service: Service) => void;
 }
 
-export const Services: React.FC<ServicesProps> = ({ onOpenQuiz, onSelectService }) => {
+export const Services: React.FC<ServicesProps> = ({ onOpenQuiz }) => {
   return (
     <section id="services" className="py-24 md:py-36 relative bg-[#FAF6F3]/85 backdrop-blur-[2px] border-t border-[#F9D8DE]/80">
       {/* Delicate background gingham accents */}
@@ -61,15 +61,11 @@ export const Services: React.FC<ServicesProps> = ({ onOpenQuiz, onSelectService 
                   )}
 
                   <div>
-                    {/* Card Top Row: Step Index & Timeline */}
+                    {/* Card Top Row: Step Index */}
                     <div className="flex items-center justify-between pb-3 border-b border-[#F9D8DE] mb-4">
                       <span className="text-xs font-mono font-bold text-[#C47B89]">
                         {service.step} / 06
                       </span>
-                      <div className="flex items-center gap-1 text-[11px] text-[#7A646A] bg-[#FFF9FA] px-2.5 py-0.5 rounded-full border border-[#F9D8DE]">
-                        <Clock className="w-3 h-3 text-[#C47B89]" />
-                        <span>{service.duration}</span>
-                      </div>
                     </div>
 
                     {/* Service Title */}
@@ -88,7 +84,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenQuiz, onSelectService 
                     </p>
 
                     {/* Deliverables List */}
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2">
                       <p className="text-[11px] font-semibold uppercase tracking-wider text-[#34282C]">
                         Includes:
                       </p>
@@ -99,24 +95,6 @@ export const Services: React.FC<ServicesProps> = ({ onOpenQuiz, onSelectService 
                         </div>
                       ))}
                     </div>
-                  </div>
-
-                  {/* Card Bottom CTA & Pricing */}
-                  <div className="pt-4 border-t border-[#F9D8DE]/70 flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] text-[#7A646A] uppercase tracking-wider block">Investment</span>
-                      <span className="text-base font-serif font-semibold text-[#34282C]">
-                        from {service.priceStarting}
-                      </span>
-                    </div>
-
-                    <button
-                      onClick={() => onSelectService(service)}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FCECEF] hover:bg-[#F9D8DE] text-[#34282C] text-xs font-semibold uppercase tracking-wider border border-[#F4B8C5] shadow-2xs transition-colors cursor-pointer"
-                    >
-                      <span>Inquire</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[#C47B89]" />
-                    </button>
                   </div>
                 </div>
               </div>
