@@ -68,19 +68,14 @@ export const AboutModal: React.FC<AboutModalProps> = ({
           {/* Studio Story Prose */}
           <div className="space-y-4 text-base leading-relaxed">
             <p>
-              We founded AI ADDA AGENCY with a simple conviction: 
+              I founded AI ADDA AGENCY with a simple conviction: 
               <strong> the internet shouldn't feel like a sterile office building.</strong>
             </p>
             <p>
-              Growing up, Kanak & Harshi spent hours collecting vintage fashion magazines, Japanese stationery,
-              and textured art papers. When we transitioned into software engineering and bespoke web design,
-              we noticed how cold and robotic most modern websites had become. Tech founders and boutique
-              creators were forced to pick between clunky DIY builders or generic, corporate SaaS templates.
+              I’m passionate about combining creativity, technology, and AI to build modern, visually engaging websites that help businesses strengthen their online presence. I enjoy turning ideas into digital experiences that are not only attractive but also functional, user-friendly, and designed with the customer in mind.
             </p>
             <p>
-              Today, we blend tactile physical nostalgia—paper grain, gingham checks, delicate serifs,
-              warm blush palettes—with modern web engineering, lightning-fast Core Web Vitals, and
-              conversion-tested UX architecture.
+              Today, through AI ADDA AGENCY, I craft bespoke website concepts, responsive builds, and digital experiences tailored to different industries—combining creative intuition, AI-powered tools, and clean, high-performance web engineering.
             </p>
           </div>
 
@@ -154,7 +149,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({
               }}
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#34282C] text-[#FFFDF9] text-xs font-semibold uppercase tracking-wider hover:bg-[#44373B] transition-colors cursor-pointer shadow-paper"
             >
-              <span>Work With Kanak & Harshi</span>
+              <span>Work With Kanak</span>
               <ArrowRight className="w-4 h-4 text-[#F9D8DE]" />
             </button>
           </div>

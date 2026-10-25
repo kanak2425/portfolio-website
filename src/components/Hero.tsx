@@ -179,7 +179,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onScrollToWork }) => 
                 <div className="relative overflow-hidden rounded-lg group aspect-[16/10] bg-[#FAF8F5]">
                   <img
                     src={HERO_IMAGE}
-                    alt="Luxury aesthetic website designed by Kanak & Harshi"
+                    alt="Luxury aesthetic website designed by Kanak"
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />

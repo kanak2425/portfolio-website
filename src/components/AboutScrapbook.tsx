@@ -35,8 +35,8 @@ export const AboutScrapbook: React.FC<AboutScrapbookProps> = ({ onOpenAboutModal
                 <div className="relative aspect-[3/4] overflow-hidden rounded bg-[#F8EFEA] mb-4 group">
                   <img
                     src={DESIGNER_POLAROID}
-                    alt="Kanak & Harshi in their sunlit design studio"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    alt="Kanak in her sunlit design studio"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute bottom-3 left-3 bg-[#FFFDFB]/90 backdrop-blur-sm px-3 py-1 rounded-full text-[11px] font-medium text-[#34282C] flex items-center gap-1.5 shadow-xs">
@@ -84,22 +84,27 @@ export const AboutScrapbook: React.FC<AboutScrapbookProps> = ({ onOpenAboutModal
 
             {/* Editorial Title */}
             <h2 className="text-4xl sm:text-5xl font-serif font-medium text-[#34282C] leading-[1.15] mb-6">
-              Hi, We’re Kanak & Harshi — <br />
-              <span className="italic font-normal text-[#C47B89]">We turn romantic vision</span> into high-converting digital flagships.
+              About Me — <br />
+              <span className="italic font-normal text-[#C47B89]">Founder of</span> AI ADDA AGENCY
             </h2>
 
             {/* Bio Prose */}
             <div className="space-y-4 text-base md:text-lg text-[#59464C] leading-relaxed mb-8">
               <p>
-                We are an independent web design, art direction, and creative engineering duo.
-                Over the past 5 years, we’ve worked with boutique hospitality retreats, luxury salons,
-                architectural studios, and avant-garde creators globally.
+                Hi, I’m a young web designer and the founder of <strong className="font-semibold text-[#34282C]">AI ADDA AGENCY</strong>.
               </p>
               <p>
-                Too much of the modern web feels identical: stark tech boxes, generic SaaS templates,
-                and cold corporate grids. We believe your website should feel like walking into a luxury
-                boutique — tactile, inspiring, deeply personal, and completely unforgettable.
+                I’m passionate about combining creativity, technology, and AI to build modern, visually engaging websites that help businesses strengthen their online presence. I enjoy turning ideas into digital experiences that are not only attractive but also functional, user-friendly, and designed with the customer in mind.
               </p>
+              <p>
+                Through AI ADDA AGENCY, I work on website concepts, responsive designs, business websites, and digital experiences tailored to different industries. I’m continuously learning, experimenting with new technologies, and improving my skills in web development, AI-powered tools, and digital strategy.
+              </p>
+              <p>
+                I believe that every business has a story worth presenting online, and my goal is to help bring those stories to life through thoughtful design and technology.
+              </p>
+              <div className="p-4 bg-[#FFF9FA] border border-[#F9D8DE] rounded-xl text-sm md:text-base text-[#44373B] shadow-2xs">
+                <span className="font-semibold text-[#34282C]">My mission:</span> To make modern, effective web experiences accessible to businesses and help turn creative ideas into reality.
+              </div>
             </div>
 
             {/* 3 Editorial Value Badges (Unboxed metadata style) */}
