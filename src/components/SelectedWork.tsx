@@ -188,22 +188,14 @@ export const SelectedWork: React.FC<SelectedWorkProps> = ({ onSelectProject }) =
 
                     <div className="pt-3 border-t border-[#F9D8DE]/70 flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <button
-                          onClick={() => onSelectProject(project)}
-                          className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#34282C] hover:text-[#C47B89] transition-colors cursor-pointer"
-                        >
-                          CASE STUDY
-                          <ArrowUpRight className="w-3.5 h-3.5" />
-                        </button>
-
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#C47B89] hover:underline"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#34282C] hover:text-[#C47B89] transition-colors"
                         >
-                          VISIT LIVE
-                          <ExternalLink className="w-3 h-3" />
+                          <span>VISIT LIVE</span>
+                          <ExternalLink className="w-3.5 h-3.5 text-[#C47B89]" />
                         </a>
                       </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { SERVICES } from '../data/portfolioData';
 import { Service } from '../types';
 
@@ -8,7 +8,7 @@ interface ServicesProps {
   onSelectService?: (service: Service) => void;
 }
 
-export const Services: React.FC<ServicesProps> = ({ onOpenQuiz }) => {
+export const Services: React.FC<ServicesProps> = () => {
   return (
     <section id="services" className="py-24 md:py-36 relative bg-[#FAF6F3]/85 backdrop-blur-[2px] border-t border-[#F9D8DE]/80">
       {/* Delicate background gingham accents */}
@@ -95,29 +95,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenQuiz }) => {
           })}
         </div>
 
-        {/* Section Bottom Banner */}
-        <div className="mt-16 bg-[#FFFDFB] rounded-3xl p-8 border border-[#F4B8C5] shadow-paper flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#FCECEF] border border-[#F4B8C5] flex items-center justify-center shrink-0">
-              <Sparkles className="w-6 h-6 text-[#C47B89]" />
-            </div>
-            <div>
-              <h4 className="text-xl font-serif font-medium text-[#34282C]">
-                Need something custom or a hybrid retainer?
-              </h4>
-              <p className="text-sm text-[#59464C] mt-0.5">
-                We also offer monthly creative direction retainers and bespoke micro-app development.
-              </p>
-            </div>
-          </div>
 
-          <button
-            onClick={onOpenQuiz}
-            className="px-6 py-3 rounded-full bg-[#34282C] text-[#FFFDF9] text-xs font-semibold uppercase tracking-wider hover:bg-[#44373B] transition-colors whitespace-nowrap shadow-xs cursor-pointer"
-          >
-            Calculate Custom Scope ↗
-          </button>
-        </div>
       </div>
     </section>
   );
